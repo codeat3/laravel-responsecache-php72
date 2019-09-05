@@ -18,7 +18,7 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 
 You can install the package via composer:
 ``` bash
-composer require codeat3/laravel-responsecache
+composer require codeat3/laravel-responsecache-php72
 ```
 
 The package will automatically register itself.
