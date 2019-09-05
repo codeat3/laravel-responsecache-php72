@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Test;
+namespace Codeat3\ResponseCache\Test;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

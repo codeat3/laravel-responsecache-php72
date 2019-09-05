@@ -1,10 +1,12 @@
 # Speed up an app by caching the entire response
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-responsecache)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/codeat3/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/codeat3/laravel-responsecache)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-responsecache/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-responsecache)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-responsecache.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-responsecache)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-responsecache)
+[![Build Status](https://img.shields.io/travis/codeat3/laravel-responsecache/master.svg?style=flat-square)](https://travis-ci.org/codeat3/laravel-responsecache)
+[![Quality Score](https://img.shields.io/scrutinizer/g/codeat3/laravel-responsecache.svg?style=flat-square)](https://scrutinizer-ci.com/g/codeat3/laravel-responsecache)
+[![Total Downloads](https://img.shields.io/packagist/dt/codeat3/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/codeat3/laravel-responsecache)
+
+This is the forked version of [spatie](https://spatie.be/)'s wonderful package [laravel-responsecache](laravel-responsecache), but compatible with PHP 7.2.
 
 This Laravel package can cache an entire response. By default it will cache all successful get-requests that return text based content (such as html and json) for a week. This could potentially speed up the response quite considerably.
 
@@ -16,14 +18,14 @@ Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all
 
 You can install the package via composer:
 ``` bash
-composer require spatie/laravel-responsecache
+composer require codeat3/laravel-responsecache-php72
 ```
 
 The package will automatically register itself.
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Spatie\ResponseCache\ResponseCacheServiceProvider"
+php artisan vendor:publish --provider="Codeat3\ResponseCache\ResponseCacheServiceProvider"
 ```
 
 This is the contents of the published config file:
@@ -44,7 +46,7 @@ return [
      *  You can provide your own class given that it implements the
      *  CacheProfile interface.
      */
-    'cache_profile' => Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests::class,
+    'cache_profile' => Codeat3\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests::class,
 
     /*
      * When using the default CacheRequestFilter this setting controls the
@@ -77,7 +79,7 @@ return [
      * Each replacer must implement the Replacer interface.
      */
     'replacers' => [
-        \Spatie\ResponseCache\Replacers\CsrfTokenReplacer::class,
+        \Codeat3\ResponseCache\Replacers\CsrfTokenReplacer::class,
     ],
 
     /*
@@ -93,17 +95,17 @@ return [
      * This class is responsible for generating a hash for a request. This hash
      * is used to look up an cached response.
      */
-    'hasher' => \Spatie\ResponseCache\Hasher\DefaultHasher::class,
+    'hasher' => \Codeat3\ResponseCache\Hasher\DefaultHasher::class,
 
     /*
      * This class serializes cache data and expands it.
      * Serialization can save the data to be returned in an appropriate form.
      */
-    'serializer' => \Spatie\ResponseCache\Serializer\DefaultSerializer::class,
+    'serializer' => \Codeat3\ResponseCache\Serializer\DefaultSerializer::class,
 ];
 ```
 
-And finally you should install the provided middlewares `\Spatie\ResponseCache\Middlewares\CacheResponse::class` and `\Spatie\ResponseCache\Middlewares\DoNotCacheResponse` in the http kernel.
+And finally you should install the provided middlewares `\Codeat3\ResponseCache\Middlewares\CacheResponse::class` and `\Codeat3\ResponseCache\Middlewares\DoNotCacheResponse` in the http kernel.
 
 
 ```php
@@ -114,14 +116,14 @@ And finally you should install the provided middlewares `\Spatie\ResponseCache\M
 protected $middlewareGroups = [
    'web' => [
        ...
-       \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+       \Codeat3\ResponseCache\Middlewares\CacheResponse::class,
    ],
 
 ...
 
 protected $routeMiddleware = [
    ...
-   'doNotCacheResponse' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
+   'doNotCacheResponse' => \Codeat3\ResponseCache\Middlewares\DoNotCacheResponse::class,
 ];
 
 ```
@@ -159,7 +161,7 @@ You can leverage model events to clear the cache whenever a model is saved or de
 ```php
 namespace App\Traits;
 
-use Spatie\ResponseCache\Facades\ResponseCache;
+use Codeat3\ResponseCache\Facades\ResponseCache;
 
 trait ClearsResponseCache
 {
@@ -194,7 +196,7 @@ ResponseCache::forget(['/some-uri', '/other-uri']);
 ResponseCache::forget('/some-uri', '/other-uri');
 ```
 
-The `forget` method only works when you're not using a `cacheNameSuffix` in your cache profile. 
+The `forget` method only works when you're not using a `cacheNameSuffix` in your cache profile.
 
 ### Preventing a request from being cached
 Requests can be ignored by using the `doNotCacheResponse`-middleware.
@@ -222,10 +224,10 @@ class UserController extends Controller
 
 ### Creating a custom cache profile
 To determine which requests should be cached, and for how long, a cache profile class is used.
-The default class that handles these questions is `Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests`.
+The default class that handles these questions is `Codeat3\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests`.
 
 You can create your own cache profile class by implementing the `
-Spatie\ResponseCache\CacheProfiles\CacheProfile`-interface. Let's take a look at the interface:
+Codeat3\ResponseCache\CacheProfiles\CacheProfile`-interface. Let's take a look at the interface:
 
 ```php
 interface CacheProfile
@@ -270,7 +272,7 @@ Instead of registering the `cacheResponse` middleware globally, you can also reg
 ```php
 protected $routeMiddleware = [
    ...
-   'cacheResponse' => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+   'cacheResponse' => \Codeat3\ResponseCache\Middlewares\CacheResponse::class,
 ];
 ```
 
@@ -309,7 +311,7 @@ Route::group(function() {
 
 #### Clearing tagged content
 
-You can clear responses which are assigned a tag or list of tags. For example, this statement would remove all routes 
+You can clear responses which are assigned a tag or list of tags. For example, this statement would remove all routes
 specified above:
 
 ```php
@@ -322,7 +324,7 @@ In contrast, this statement would remove all of the routes except the `'/test1'`
 ResponseCache::clear(['bar']);
 ```
 
-Note that this uses [Laravel's built in cache tags](https://laravel.com/docs/master/cache#cache-tags) functionality, meaning 
+Note that this uses [Laravel's built in cache tags](https://laravel.com/docs/master/cache#cache-tags) functionality, meaning
 routes can also be cleared in the usual way:
 
 ```php
@@ -335,21 +337,21 @@ There are several events you can use to monitor and debug response caching in yo
 
 #### ResponseCacheHit
 
-`Spatie\ResponseCache\Events\ResponseCacheHit`
+`Codeat3\ResponseCache\Events\ResponseCacheHit`
 
 This event is fired when a request passes through the `ResponseCache` middleware and a cached response was found and returned.
 
 #### CacheMissed
 
-`Spatie\ResponseCache\Events\CacheMissed`
+`Codeat3\ResponseCache\Events\CacheMissed`
 
 This event is fired when a request passes through the `ResponseCache` middleware but no cached response was found or returned.
 
 #### ClearingResponseCache and ClearedResponseCache
 
-`Spatie\ResponseCache\Events\ClearingResponseCache`
+`Codeat3\ResponseCache\Events\ClearingResponseCache`
 
-`Spatie\ResponseCache\Events\ClearedResponseCache`
+`Codeat3\ResponseCache\Events\ClearedResponseCache`
 
 These events are fired respectively when the `responsecache:clear` is started and finished.
 
@@ -358,7 +360,7 @@ These events are fired respectively when the `responsecache:clear` is started an
 To replace cached content by dynamic content, you can create a replacer.
 By default we add a `CsrfTokenReplacer` in the config file.
 
-You can create your own replacers by implementing the `Spatie\ResponseCache\Replacers\Replacer`-interface. Let's take a look at the interface:
+You can create your own replacers by implementing the `Codeat3\ResponseCache\Replacers\Replacer`-interface. Let's take a look at the interface:
 
 ```php
 interface Replacer
@@ -389,7 +391,7 @@ Afterwards you can define your replacer in the `responsecache.php` config file:
  * Each replacer must implement the Replacer interface.
  */
 'replacers' => [
-    \Spatie\ResponseCache\Replacers\CsrfTokenReplacer::class,
+    \Codeat3\ResponseCache\Replacers\CsrfTokenReplacer::class,
 ],
 ```
 
@@ -397,12 +399,12 @@ Afterwards you can define your replacer in the `responsecache.php` config file:
 
 A serializer is responsible from serializing a response so it can be stored in the cache. It is also responsible for rebuilding the response from the cache.
 
-The default serializer `Spatie\ResponseCache\Serializer\DefaultSerializer` will just work in most cases.
+The default serializer `Codeat3\ResponseCache\Serializer\DefaultSerializer` will just work in most cases.
 
-If you have some special serialization needs you can specify a custom serializer in the `serializer` key of the config file. Any class that implements `Spatie\ResponseCache\Serializers\Serializer` can be used. This is how that interface looks like:
+If you have some special serialization needs you can specify a custom serializer in the `serializer` key of the config file. Any class that implements `Codeat3\ResponseCache\Serializers\Serializer` can be used. This is how that interface looks like:
 
 ```php
-namespace Spatie\ResponseCache\Serializers;
+namespace Codeat3\ResponseCache\Serializers;
 
 use Symfony\Component\HttpFoundation\Response;
 
@@ -437,22 +439,22 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
+If you discover any security related issues, please email freek@spatie.be, code.at.three@gmail.com instead of using the issue tracker.
 
 ## Postcardware
 
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
+You're free to use this package, but if it makes it to your production environment we highly appreciate you send spatie a postcard from your hometown, mentioning which of our package(s) you are using.
 
-Our address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
+Spatie address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
 
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
+Spatie publishes all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
 
 ## Credits
 
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
 
-## Support us
+## Support spatie
 
 Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
 

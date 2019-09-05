@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Exceptions;
+namespace Codeat3\ResponseCache\Exceptions;
 
 use Exception;
 

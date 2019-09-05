@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\ResponseCache\Test\Replacers;
+namespace Codeat3\ResponseCache\Test\Replacers;
 
-use Spatie\ResponseCache\Test\TestCase;
-use Spatie\ResponseCache\Replacers\CsrfTokenReplacer;
+use Codeat3\ResponseCache\Test\TestCase;
+use Codeat3\ResponseCache\Replacers\CsrfTokenReplacer;
 
 class CsrfTokenReplacerTest extends TestCase
 {

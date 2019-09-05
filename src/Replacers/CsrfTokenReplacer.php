@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Replacers;
+namespace Codeat3\ResponseCache\Replacers;
 
 use Symfony\Component\HttpFoundation\Response;
 

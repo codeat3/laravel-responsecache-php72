@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\CacheProfiles;
+namespace Codeat3\ResponseCache\CacheProfiles;
 
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;

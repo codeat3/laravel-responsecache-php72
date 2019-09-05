@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Serializers;
+namespace Codeat3\ResponseCache\Serializers;
 
 use Symfony\Component\HttpFoundation\Response;
 

@@ -1,17 +1,17 @@
 <?php
 
-namespace Spatie\ResponseCache;
+namespace Codeat3\ResponseCache;
 
 use Illuminate\Cache\Repository;
 use Symfony\Component\HttpFoundation\Response;
-use Spatie\ResponseCache\Serializers\Serializer;
+use Codeat3\ResponseCache\Serializers\Serializer;
 
 class ResponseCacheRepository
 {
     /** @var \Illuminate\Cache\Repository */
     protected $cache;
 
-    /** @var \Spatie\ResponseCache\ResponseSerializer */
+    /** @var \Codeat3\ResponseCache\ResponseSerializer */
     protected $responseSerializer;
 
     public function __construct(Serializer $responseSerializer, Repository $cache)
