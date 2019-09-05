@@ -1,19 +1,19 @@
 <?php
 
-namespace Spatie\ResponseCache\Middlewares;
+namespace Codeat3\ResponseCache\Middlewares;
 
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Spatie\ResponseCache\ResponseCache;
-use Spatie\ResponseCache\Events\CacheMissed;
-use Spatie\ResponseCache\Replacers\Replacer;
+use Codeat3\ResponseCache\ResponseCache;
+use Codeat3\ResponseCache\Events\CacheMissed;
+use Codeat3\ResponseCache\Replacers\Replacer;
 use Symfony\Component\HttpFoundation\Response;
-use Spatie\ResponseCache\Events\ResponseCacheHit;
+use Codeat3\ResponseCache\Events\ResponseCacheHit;
 
 class CacheResponse
 {
-    /** @var \Spatie\ResponseCache\ResponseCache */
+    /** @var \Codeat3\ResponseCache\ResponseCache */
     protected $responseCache;
 
     public function __construct(ResponseCache $responseCache)

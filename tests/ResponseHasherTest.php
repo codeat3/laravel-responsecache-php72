@@ -1,18 +1,18 @@
 <?php
 
-namespace Spatie\ResponseCache\Test;
+namespace Codeat3\ResponseCache\Test;
 
 use Mockery;
 use Illuminate\Http\Request;
-use Spatie\ResponseCache\Hasher\DefaultHasher;
-use Spatie\ResponseCache\CacheProfiles\CacheProfile;
+use Codeat3\ResponseCache\Hasher\DefaultHasher;
+use Codeat3\ResponseCache\CacheProfiles\CacheProfile;
 
 class ResponseHasherTest extends TestCase
 {
-    /** @var \Spatie\ResponseCache\Hasher\DefaultHasher */
+    /** @var \Codeat3\ResponseCache\Hasher\DefaultHasher */
     protected $requestHasher;
 
-    /** @var \Spatie\ResponseCache\CacheProfiles\CacheProfile */
+    /** @var \Codeat3\ResponseCache\CacheProfiles\CacheProfile */
     protected $cacheProfile;
 
     /** @var \Illuminate\Http\Request */

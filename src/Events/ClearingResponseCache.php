@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Events;
+namespace Codeat3\ResponseCache\Events;
 
 class ClearingResponseCache
 {

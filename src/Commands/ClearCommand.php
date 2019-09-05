@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\ResponseCache\Commands;
+namespace Codeat3\ResponseCache\Commands;
 
 use Illuminate\Console\Command;
-use Spatie\ResponseCache\ResponseCacheRepository;
-use Spatie\ResponseCache\Events\ClearedResponseCache;
-use Spatie\ResponseCache\Events\ClearingResponseCache;
+use Codeat3\ResponseCache\ResponseCacheRepository;
+use Codeat3\ResponseCache\Events\ClearedResponseCache;
+use Codeat3\ResponseCache\Events\ClearingResponseCache;
 
 class ClearCommand extends Command
 {

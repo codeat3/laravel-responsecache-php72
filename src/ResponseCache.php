@@ -1,21 +1,21 @@
 <?php
 
-namespace Spatie\ResponseCache;
+namespace Codeat3\ResponseCache;
 
 use Illuminate\Http\Request;
-use Spatie\ResponseCache\Hasher\RequestHasher;
+use Codeat3\ResponseCache\Hasher\RequestHasher;
 use Symfony\Component\HttpFoundation\Response;
-use Spatie\ResponseCache\CacheProfiles\CacheProfile;
+use Codeat3\ResponseCache\CacheProfiles\CacheProfile;
 
 class ResponseCache
 {
-    /** @var \Spatie\ResponseCache\ResponseCacheRepository */
+    /** @var \Codeat3\ResponseCache\ResponseCacheRepository */
     protected $cache;
 
     /** @var RequestHasher */
     protected $hasher;
 
-    /** @var \Spatie\ResponseCache\CacheProfiles\CacheProfile */
+    /** @var \Codeat3\ResponseCache\CacheProfiles\CacheProfile */
     protected $cacheProfile;
 
     public function __construct(ResponseCacheRepository $cache, RequestHasher $hasher, CacheProfile $cacheProfile)
@@ -95,7 +95,7 @@ class ResponseCache
      * @param string|array $uris
      * @param string[]        $tags
      *
-     * @return \Spatie\ResponseCache\ResponseCache
+     * @return \Codeat3\ResponseCache\ResponseCache
      */
     public function forget($uris, array $tags = []): self
     {

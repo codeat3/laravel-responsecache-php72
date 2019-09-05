@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Facades;
+namespace Codeat3\ResponseCache\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

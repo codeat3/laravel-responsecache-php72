@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\ResponseCache\Test\Serializers;
+namespace Codeat3\ResponseCache\Test\Serializers;
 
 use Illuminate\Http\JsonResponse;
-use Spatie\ResponseCache\Serializers\DefaultSerializer;
+use Codeat3\ResponseCache\Serializers\DefaultSerializer;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Response;
 

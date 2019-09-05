@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Test;
+namespace Codeat3\ResponseCache\Test;
 
 use File;
 use Route;
@@ -9,10 +9,10 @@ use Illuminate\Routing\Router;
 use Illuminate\Database\Schema\Blueprint;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Foundation\Testing\TestResponse;
-use Spatie\ResponseCache\Facades\ResponseCache;
-use Spatie\ResponseCache\Middlewares\CacheResponse;
-use Spatie\ResponseCache\ResponseCacheServiceProvider;
-use Spatie\ResponseCache\Middlewares\DoNotCacheResponse;
+use Codeat3\ResponseCache\Facades\ResponseCache;
+use Codeat3\ResponseCache\Middlewares\CacheResponse;
+use Codeat3\ResponseCache\ResponseCacheServiceProvider;
+use Codeat3\ResponseCache\Middlewares\DoNotCacheResponse;
 
 abstract class TestCase extends Orchestra
 {

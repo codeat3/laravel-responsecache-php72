@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-responsecache",
+    "name": "codeat3/laravel-responsecache-php72",
     "description": "Speed up a Laravel application by caching the entire response",
     "keywords": [
         "spatie",
@@ -9,7 +9,7 @@
         "response",
         "performance"
     ],
-    "homepage": "https://github.com/spatie/laravel-responsecache",
+    "homepage": "https://github.com/codeat3/laravel-responsecache",
     "license": "MIT",
     "authors": [
         {
@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\ResponseCache\\": "src"
+            "Codeat3\\ResponseCache\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\ResponseCache\\Test\\": "tests"
+            "Codeat3\\ResponseCache\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\ResponseCache\\ResponseCacheServiceProvider"
+                "Codeat3\\ResponseCache\\ResponseCacheServiceProvider"
             ],
             "aliases": {
-                "ResponseCache": "Spatie\\ResponseCache\\Facades\\ResponseCache"
+                "ResponseCache": "Codeat3\\ResponseCache\\Facades\\ResponseCache"
             }
         }
     }

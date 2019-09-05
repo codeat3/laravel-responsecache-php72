@@ -13,7 +13,7 @@ return [
      *  You can provide your own class given that it implements the
      *  CacheProfile interface.
      */
-    'cache_profile' => Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests::class,
+    'cache_profile' => Codeat3\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests::class,
 
     /*
      * When using the default CacheRequestFilter this setting controls the
@@ -46,7 +46,7 @@ return [
      * Each replacer must implement the Replacer interface.
      */
     'replacers' => [
-        \Spatie\ResponseCache\Replacers\CsrfTokenReplacer::class,
+        \Codeat3\ResponseCache\Replacers\CsrfTokenReplacer::class,
     ],
 
     /*
@@ -62,10 +62,10 @@ return [
      * This class is responsible for generating a hash for a request. This hash
      * is used to look up an cached response.
      */
-    'hasher' => \Spatie\ResponseCache\Hasher\DefaultHasher::class,
+    'hasher' => \Codeat3\ResponseCache\Hasher\DefaultHasher::class,
 
     /*
      * This class is responsible for serializing responses.
      */
-    'serializer' => \Spatie\ResponseCache\Serializers\DefaultSerializer::class,
+    'serializer' => \Codeat3\ResponseCache\Serializers\DefaultSerializer::class,
 ];

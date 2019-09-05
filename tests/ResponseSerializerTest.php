@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\ResponseCache\Test;
+namespace Codeat3\ResponseCache\Test;
 
 use Config;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
-use Spatie\ResponseCache\Serializers\Serializer;
-use Spatie\ResponseCache\Test\Serializers\TestSerializer;
-use Spatie\ResponseCache\Exceptions\CouldNotUnserialize;
+use Codeat3\ResponseCache\Serializers\Serializer;
+use Codeat3\ResponseCache\Test\Serializers\TestSerializer;
+use Codeat3\ResponseCache\Exceptions\CouldNotUnserialize;
 
 class ResponseSerializerTest extends TestCase
 {

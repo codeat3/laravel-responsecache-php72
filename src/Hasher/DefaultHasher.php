@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\ResponseCache\Hasher;
+namespace Codeat3\ResponseCache\Hasher;
 
 use Illuminate\Http\Request;
-use Spatie\ResponseCache\CacheProfiles\CacheProfile;
+use Codeat3\ResponseCache\CacheProfiles\CacheProfile;
 
 class DefaultHasher implements RequestHasher
 {
-    /** @var \Spatie\ResponseCache\CacheProfiles\CacheProfile */
+    /** @var \Codeat3\ResponseCache\CacheProfiles\CacheProfile */
     protected $cacheProfile;
 
     public function __construct(CacheProfile $cacheProfile)

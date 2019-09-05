@@ -1,14 +1,14 @@
 <?php
 
-namespace Spatie\ResponseCache;
+namespace Codeat3\ResponseCache;
 
 use Illuminate\Cache\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Support\ServiceProvider;
-use Spatie\ResponseCache\Hasher\RequestHasher;
-use Spatie\ResponseCache\Commands\ClearCommand;
-use Spatie\ResponseCache\Serializers\Serializer;
-use Spatie\ResponseCache\CacheProfiles\CacheProfile;
+use Codeat3\ResponseCache\Hasher\RequestHasher;
+use Codeat3\ResponseCache\Commands\ClearCommand;
+use Codeat3\ResponseCache\Serializers\Serializer;
+use Codeat3\ResponseCache\CacheProfiles\CacheProfile;
 
 class ResponseCacheServiceProvider extends ServiceProvider
 {

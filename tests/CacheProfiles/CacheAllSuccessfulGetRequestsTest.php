@@ -1,17 +1,17 @@
 <?php
 
-namespace Spatie\ResponseCache\Test\CacheProfiles;
+namespace Codeat3\ResponseCache\Test\CacheProfiles;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use Spatie\ResponseCache\Test\User;
-use Spatie\ResponseCache\Test\TestCase;
+use Codeat3\ResponseCache\Test\User;
+use Codeat3\ResponseCache\Test\TestCase;
 use Symfony\Component\HttpFoundation\Response;
-use Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests;
+use Codeat3\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests;
 
 class CacheAllSuccessfulGetRequestsTest extends TestCase
 {
-    /** @var \Spatie\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests */
+    /** @var \Codeat3\ResponseCache\CacheProfiles\CacheAllSuccessfulGetRequests */
     protected $cacheProfile;
 
     public function setUp(): void
@@ -112,7 +112,7 @@ class CacheAllSuccessfulGetRequestsTest extends TestCase
      *
      * @param int $statusCode
      *
-     * @return \Symfony\Component\HttpFoundation\Response;
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     protected function createResponse($statusCode, $contentType = 'text/html; charset=UTF-8')
     {

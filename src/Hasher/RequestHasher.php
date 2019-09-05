@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\ResponseCache\Hasher;
+namespace Codeat3\ResponseCache\Hasher;
 
 use Illuminate\Http\Request;
 

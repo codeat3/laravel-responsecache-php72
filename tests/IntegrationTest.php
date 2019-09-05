@@ -1,13 +1,13 @@
 <?php
 
-namespace Spatie\ResponseCache\Test;
+namespace Codeat3\ResponseCache\Test;
 
 use DateTime;
 use Carbon\Carbon;
 use ResponseCache;
 use Illuminate\Support\Facades\Event;
-use Spatie\ResponseCache\Events\CacheMissed;
-use Spatie\ResponseCache\Events\ResponseCacheHit;
+use Codeat3\ResponseCache\Events\CacheMissed;
+use Codeat3\ResponseCache\Events\ResponseCacheHit;
 
 class IntegrationTest extends TestCase
 {
