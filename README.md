@@ -1,10 +1,10 @@
-# Speed up an app by caching the entire response
+# Spatie's laravel-responsecache fork for php 7.2. Speed up an app by caching the entire response
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/codeat3/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/codeat3/laravel-responsecache)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/codeat3/laravel-responsecache-php72.svg?style=flat-square)](https://packagist.org/packages/codeat3/laravel-responsecache-php72)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/codeat3/laravel-responsecache/master.svg?style=flat-square)](https://travis-ci.org/codeat3/laravel-responsecache)
-[![Quality Score](https://img.shields.io/scrutinizer/g/codeat3/laravel-responsecache.svg?style=flat-square)](https://scrutinizer-ci.com/g/codeat3/laravel-responsecache)
-[![Total Downloads](https://img.shields.io/packagist/dt/codeat3/laravel-responsecache.svg?style=flat-square)](https://packagist.org/packages/codeat3/laravel-responsecache)
+[![Build Status](https://img.shields.io/travis/codeat3/laravel-responsecache-php72/master.svg?style=flat-square)](https://travis-ci.org/codeat3/laravel-responsecache-php72)
+[![Quality Score](https://img.shields.io/scrutinizer/g/codeat3/laravel-responsecache-php72.svg?style=flat-square)](https://scrutinizer-ci.com/g/codeat3/laravel-responsecache-php72)
+[![Total Downloads](https://img.shields.io/packagist/dt/codeat3/laravel-responsecache-php72.svg?style=flat-square)](https://packagist.org/packages/codeat3/laravel-responsecache-php72)
 
 This is the forked version of [spatie](https://spatie.be/)'s wonderful package [laravel-responsecache](laravel-responsecache), but compatible with PHP 7.2.
 
@@ -12,7 +12,7 @@ This Laravel package can cache an entire response. By default it will cache all 
 
 So the first time a request comes in the package will save the response before sending it to the users. When the same request comes in again we're not going through the entire application but just respond with the saved response.
 
-Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+Spatie is a webdesign agency in Antwerp, Belgium. You'll find an overview of all their open source projects [on their website](https://spatie.be/opensource).
 
 ## Installation
 
@@ -443,11 +443,11 @@ If you discover any security related issues, please email freek@spatie.be, code.
 
 ## Postcardware
 
-You're free to use this package, but if it makes it to your production environment we highly appreciate you send spatie a postcard from your hometown, mentioning which of our package(s) you are using.
+You're free to use this package, but if it makes it to your production environment we highly appreciate you send spatie a postcard from your hometown, mentioning which of spatie package(s) you are using.
 
 Spatie address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
 
-Spatie publishes all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
+Spatie publishes all received postcards [on spatie's company website](https://spatie.be/en/opensource/postcards).
 
 ## Credits
 
@@ -456,9 +456,9 @@ Spatie publishes all received postcards [on our company website](https://spatie.
 
 ## Support spatie
 
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all their open source projects [on their website](https://spatie.be/opensource).
 
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/spatie).
+Does your business depend on their contributions? Reach out and support them on [Patreon](https://www.patreon.com/spatie).
 All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 ## License

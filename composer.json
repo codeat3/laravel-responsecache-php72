@@ -1,6 +1,6 @@
 {
     "name": "codeat3/laravel-responsecache-php72",
-    "description": "Speed up a Laravel application by caching the entire response",
+    "description": "Spatie's laravel-responsecache forked version for php 7.2. Speed up a Laravel application by caching the entire response",
     "keywords": [
         "spatie",
         "laravel-responsecache",
@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.2|^7.3",
         "laravel/framework": "~5.7.0|~5.8.0|^6.0",
         "nesbot/carbon": "~1.19 || ^2.0"
     },
